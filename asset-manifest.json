@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.773fe130.css",
-    "main.js": "/react/static/js/main.dc8c7d7d.js",
-    "static/js/453.20359781.chunk.js": "/react/static/js/453.20359781.chunk.js",
-    "static/media/about.gif": "/react/static/media/about.c05aabb7e79f07f7f539.gif",
-    "static/media/bea.png": "/react/static/media/bea.512cadeccab1c3a90d67.png",
-    "static/media/bear.png": "/react/static/media/bear.8e4ac0a3a719f7ca5e11.png",
-    "static/media/blanket.png": "/react/static/media/blanket.d0f1fcf4b064a51c7aec.png",
-    "static/media/jacket.png": "/react/static/media/jacket.31586b90fc67dbed5742.png",
-    "static/media/am.png": "/react/static/media/am.3d7768b61bb212be38b7.png",
-    "static/media/cardi.png": "/react/static/media/cardi.15ce622bff253abf036f.png",
-    "static/media/blan.png": "/react/static/media/blan.d2c6349226f159fe9bab.png",
-    "static/media/keychain.png": "/react/static/media/keychain.db76d710e198dc432c97.png",
-    "static/media/card.jpeg": "/react/static/media/card.372cac41f53b53b7004f.jpeg",
-    "static/media/sc.jpg": "/react/static/media/sc.f60e2a90f3c9d011d5c6.jpg",
-    "static/media/cr4.jpg": "/react/static/media/cr4.74b0bb67f5d41725567e.jpg",
-    "static/media/beanie.jpg": "/react/static/media/beanie.48657597f999f0f90426.jpg",
-    "static/media/logo.png": "/react/static/media/logo.04c6039a9f83bd1665f6.png",
-    "static/media/cart1.png": "/react/static/media/cart1.a349758f1fd312223d0a.png",
-    "index.html": "/react/index.html",
-    "main.773fe130.css.map": "/react/static/css/main.773fe130.css.map",
-    "main.dc8c7d7d.js.map": "/react/static/js/main.dc8c7d7d.js.map",
-    "453.20359781.chunk.js.map": "/react/static/js/453.20359781.chunk.js.map"
+    "main.css": "/React/static/css/main.773fe130.css",
+    "main.js": "/React/static/js/main.6328eedd.js",
+    "static/js/453.20359781.chunk.js": "/React/static/js/453.20359781.chunk.js",
+    "static/media/about.gif": "/React/static/media/about.c05aabb7e79f07f7f539.gif",
+    "static/media/bea.png": "/React/static/media/bea.512cadeccab1c3a90d67.png",
+    "static/media/bear.png": "/React/static/media/bear.8e4ac0a3a719f7ca5e11.png",
+    "static/media/blanket.png": "/React/static/media/blanket.d0f1fcf4b064a51c7aec.png",
+    "static/media/jacket.png": "/React/static/media/jacket.31586b90fc67dbed5742.png",
+    "static/media/am.png": "/React/static/media/am.3d7768b61bb212be38b7.png",
+    "static/media/cardi.png": "/React/static/media/cardi.15ce622bff253abf036f.png",
+    "static/media/blan.png": "/React/static/media/blan.d2c6349226f159fe9bab.png",
+    "static/media/keychain.png": "/React/static/media/keychain.db76d710e198dc432c97.png",
+    "static/media/card.jpeg": "/React/static/media/card.372cac41f53b53b7004f.jpeg",
+    "static/media/sc.jpg": "/React/static/media/sc.f60e2a90f3c9d011d5c6.jpg",
+    "static/media/cr4.jpg": "/React/static/media/cr4.74b0bb67f5d41725567e.jpg",
+    "static/media/beanie.jpg": "/React/static/media/beanie.48657597f999f0f90426.jpg",
+    "static/media/logo.png": "/React/static/media/logo.04c6039a9f83bd1665f6.png",
+    "static/media/cart1.png": "/React/static/media/cart1.a349758f1fd312223d0a.png",
+    "index.html": "/React/index.html",
+    "main.773fe130.css.map": "/React/static/css/main.773fe130.css.map",
+    "main.6328eedd.js.map": "/React/static/js/main.6328eedd.js.map",
+    "453.20359781.chunk.js.map": "/React/static/js/453.20359781.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.773fe130.css",
-    "static/js/main.dc8c7d7d.js"
+    "static/js/main.6328eedd.js"
   ]
 }
