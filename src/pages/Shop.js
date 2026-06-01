@@ -12,6 +12,7 @@ import blanket from '../assests/blanket.png'
 import Keychain from '../assests/keychain.png'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 
 
@@ -24,87 +25,109 @@ const Shop = ({ addToWishlist, isInWishlist, searchProduct }) => {
       description: "$89 - Cozy, custom-fit.",
       image: jacket,
       category: "🧶 Crochet Wearables",
-      button: "Inquire",
+      
     },
     {
       name: "Warm Beanie",
       description: "$29 - Many colors.",
       image: bea,
       category: "🧶 Crochet Wearables",
-      button: "Order",
+     
     },
     {
       name: "Crochet Bunny",
       description: "$35 - Huggable toy.",
       image: cr4,
       category: "🧸 Amigurumi Toys",
-      button: "Order",
+     
     },
     {
       name: "Teddy Bear",
       description: "$45 - Keepsake gift.",
       image: bear,
       category: "🧸 Amigurumi Toys",
-      button: "Order",
+     
     },
     {
       name: "Mini Keychain",
       description: "$12 - Tiny animals.",
       image: Keychain,
       category: "🧸 Amigurumi Toys",
-      button: "Order",
+      
     },
     {
       name: "Throw Blanket",
       description: "$120 - Warm and textured.",
       image: blanket,
       category: "🧶 Crochet Wearables",
-      button: "Order",
+      
     },
     {
       name: "Handmade Cardigans",
       description: "$50 - Cozy, custom-fit cardigans in natural fibers.",
       image: card,
       category: "🧶 Crochet Wearables",
-      button: "Inquire",
+      
     },
     {
       name: "Warm Beanies",
       description: "$29 - Perfect for winter, many colors available.",
       image: beanie,
       category: "🧶 Crochet Wearables",
-      button: "Order",
+      
     },
     {
       name: "Infinity Scarves",
       description: "$30 - Soft, elegant, and unique.",
       image: sc,
       category: "🧶 Crochet Wearables",
-      button: "Customize",
+    
     },
   ];
 
   const filteredProducts = products.filter((product) => {
-  const searchText = (searchProduct || "").toLowerCase();
+    const searchText = (searchProduct || "").toLowerCase();
 
-  return (
-    (category === "All" || product.category === category) &&
-    product.name.toLowerCase().includes(searchText)
-  );
-});
+    return (
+      (category === "All" || product.category === category) &&
+      product.name.toLowerCase().includes(searchText)
+    );
+  });
   const addToCart = (product) => {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const productIndex = cart.findIndex((item) => item.name === product.name);
+    const productIndex = cart.findIndex((item) => item.name === product.name);
 
-  if (productIndex !== -1) {
-    cart[productIndex].quantity += 1;
-  } else {
-    cart.push({ ...product, quantity: 1 });
+    if (productIndex !== -1) {
+      cart[productIndex].quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product.name} added to cart`);
+  };
+  const getWishlistClass = (product) => {
+    if (isInWishlist(product)) {
+      return "wishlist-btn added";
+    }
+
+    return "wishlist-btn";
+  };
+
+ const getWishlistHeart = (product) => {
+  if (isInWishlist(product)) {
+    return <FaHeart />;
   }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert(`${product.name} added to cart`);
+  return <FaRegHeart />;
+};
+  const getFilterButtonClass = (buttonCategory) => {
+  if (category === buttonCategory) {
+    return "filter-btn active";
+  }
+
+  return "filter-btn";
 };
 
   return (
@@ -115,29 +138,21 @@ const Shop = ({ addToWishlist, isInWishlist, searchProduct }) => {
 
       <div className="filter-buttons">
         <button
-          className={category === "All" ? "filter-btn active" : "filter-btn"}
+          className={getFilterButtonClass("All")}
           onClick={() => setCategory("All")}
         >
           All
         </button>
 
         <button
-          className={
-            category === "🧶 Crochet Wearables"
-              ? "filter-btn active"
-              : "filter-btn"
-          }
+          className={getFilterButtonClass("🧶 Crochet Wearables")}
           onClick={() => setCategory("🧶 Crochet Wearables")}
         >
           🧶 Crochet Wearables
         </button>
 
         <button
-          className={
-            category === "🧸 Amigurumi Toys"
-              ? "filter-btn active"
-              : "filter-btn"
-          }
+          className={getFilterButtonClass("🧸 Amigurumi Toys")}
           onClick={() => setCategory("🧸 Amigurumi Toys")}
         >
           🧸 Amigurumi Toys
@@ -146,6 +161,7 @@ const Shop = ({ addToWishlist, isInWishlist, searchProduct }) => {
 
       <div className="products-grid">
         {filteredProducts.map((product, index) => (
+
           <div className="product-card" key={index}>
             <img
               src={product.image}
@@ -157,18 +173,18 @@ const Shop = ({ addToWishlist, isInWishlist, searchProduct }) => {
 
             <p className="product-desc">{product.description}</p>
 
-            <button className="product-btn ">{product.button}</button>
+            
             <button className="product-btn" onClick={() => addToCart(product)}>
               Add to Cart
             </button>
 
             <button
-              className={isInWishlist(product) ? "wishlist-btn added" : "wishlist-btn"}
+              className={getWishlistClass(product)}
               onClick={() => addToWishlist(product)}
             >
-              {isInWishlist(product) ? "♥" : "♡"}
+              {getWishlistHeart(product)}
             </button>
-            
+
           </div>
         ))}
       </div>

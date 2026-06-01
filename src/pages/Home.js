@@ -6,11 +6,12 @@ import '../styles/home.css';
 import card from "../assests/cardi.png";
 import blan from "../assests/blan.png";
 import am from "../assests/am.png";
-
-
-
-
+import InstagramIcon from "@mui/icons-material/Instagram";
+import {CiPhone} from "react-icons/ci"
+import {MdOutlineEmail} from "react-icons/md"
+import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 import about from "../assests/about.gif";
+import { FaStar } from "react-icons/fa";
 
 const Home = () => {
   const [openQuestion, setOpenQuestion] = useState(0);
@@ -42,6 +43,21 @@ const Home = () => {
       setOpenQuestion(index);
     }
   };
+  const getFaqButtonClass = (index) => {
+  if (openQuestion === index) {
+    return "faq-question active";
+  }
+
+  return "faq-question";
+};
+
+const getFaqArrow = (index) => {
+  if (openQuestion === index) {
+    return <BiSolidUpArrow/>;
+  }
+
+  return <BiSolidDownArrow/>;
+};
 
   return (
     <div className="home-page">
@@ -236,11 +252,11 @@ const Home = () => {
         <div className="carousel-item active">
           <div
             className="testimonial-card text-center mx-auto"
-            style={{ maxWidth: "600px" }}
+           
           >
             <i
               className="bi bi-chat-quote fs-1"
-              style={{ color: "#C49A7B" }}
+              
             ></i>
             <p className="mt-3">
               “The blanket I ordered is absolutely stunning – so soft and
@@ -253,11 +269,11 @@ const Home = () => {
         <div className="carousel-item">
           <div
             className="testimonial-card text-center mx-auto"
-            style={{ maxWidth: "600px" }}
+            
           >
             <i
               className="bi bi-chat-quote fs-1"
-              style={{ color: "#C49A7B" }}
+              
             ></i>
             <p className="mt-3">
               “My daughter loves her custom bunny amigurumi. The attention to
@@ -270,11 +286,9 @@ const Home = () => {
         <div className="carousel-item">
           <div
             className="testimonial-card text-center mx-auto"
-            style={{ maxWidth: "600px" }}
           >
             <i
               className="bi bi-chat-quote fs-1"
-              style={{ color: "#C49A7B" }}
             ></i>
             <p className="mt-3">
               “Fast shipping, eco packaging, and the colors were exactly as I
@@ -310,7 +324,7 @@ const Home = () => {
       <section className="rating-section">
         <h2>User Rating</h2>
 
-        <div className="stars">★ ★ ★ ★ ★</div>
+        <div className="stars"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></div>
         <p className="rating-text">4.5 average based on 1500 reviews.</p>
 
         <div className="rating-row">
@@ -359,22 +373,22 @@ const Home = () => {
         <h2>Frequently Asked Questions</h2>
 
         {faqs.map((item, index) => (
-          <div className="faq-item" key={index}>
-            <button
-              className={openQuestion === index ? "faq-question active" : "faq-question"}
-              onClick={() => toggleQuestion(index)}
-            >
-              <span>{item.question}</span>
-              <span>{openQuestion === index ? "⌃" : "⌄"}</span>
-            </button>
+  <div className="faq-item" key={index}>
+    <button
+      className={getFaqButtonClass(index)}
+      onClick={() => toggleQuestion(index)}
+    >
+      <span>{item.question}</span>
+      <span>{getFaqArrow(index)}</span>
+    </button>
 
-            {openQuestion === index && (
-              <div className="faq-answer">
-                {item.answer}
-              </div>
-            )}
-          </div>
-        ))}
+    {openQuestion === index && (
+      <div className="faq-answer">
+        {item.answer}
+      </div>
+    )}
+  </div>
+))}
       </section>
 
       <section className="contact-section">
@@ -387,9 +401,9 @@ const Home = () => {
               form and we will reply within 24h.
             </p>
 
-            <p>✉ crochet.by.fatima17@gmail.com</p>
-            <p>☎ +961 78 843 585</p>
-            <p>◎ @CROCHET.BY.FATIMA17</p>
+            <p><MdOutlineEmail/> crochet.by.fatima17@gmail.com</p>
+            <p><CiPhone/> +961 78 843 585</p>
+            <p><InstagramIcon />@CROCHET.BY.FATIMA17</p>
           </div>
 
           <form className="contact-form">

@@ -47,8 +47,7 @@ function App() {
         productSearchFunction={productSearchFunction}
         clearSearch={clearSearch}
       />
- <br></br><br></br>
-
+      <main className="main-content">
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -71,6 +70,7 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/personalinfo" element={<Personalinfo />} />
       </Routes>
+      </main>
 
 
       <Footer />

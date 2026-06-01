@@ -2,6 +2,10 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styles/Contact.css";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import {CiPhone} from "react-icons/ci"
+import {MdOutlineEmail} from "react-icons/md"
+
 
 
 const Contact = () => {
@@ -47,15 +51,15 @@ const Contact = () => {
             </p>
 
             <div className="contact-detail">
-              <span className="contact-detail-icon">✉</span>
+              <span className="contact-detail-icon"><MdOutlineEmail/></span>
               crochet.by.fatima.17@gmail.com
             </div>
             <div className="contact-detail">
-              <span className="contact-detail-icon">📞</span>
+              <span className="contact-detail-icon"><CiPhone/></span>
               +961 78 843 155
             </div>
             <div className="contact-detail">
-              <span className="contact-detail-icon">📷</span>
+              <span className="contact-detail-icon"><InstagramIcon /> </span>
               @CROCHET.BY.FATIMA.17
             </div>
           </div>

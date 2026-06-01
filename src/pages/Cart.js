@@ -3,6 +3,7 @@ import "../styles/Cart.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+
 const Cart = () => {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []

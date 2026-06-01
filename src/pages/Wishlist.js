@@ -3,7 +3,8 @@ import "../styles/Wishlist.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
- function WishlistPage({ wishlist }) {
+
+function WishlistPage({ wishlist }) {
   return (
     <div className="wishlist-page">
       <h1 className="wishlist-page-title">My Wishlist</h1>
@@ -22,8 +23,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
               <h3>{item.name}</h3>
               <p>{item.description}</p>
-              <button className="product-btn">{item.button}</button>
-            </div>
+                  </div>
           ))}
         </div>
       )}

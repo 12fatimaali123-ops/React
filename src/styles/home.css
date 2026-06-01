@@ -6,7 +6,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* GENERAL SECTION STYLE */
 .home-page section {
   position: relative;
   padding: 45px 75px;
@@ -31,12 +30,12 @@
   margin-bottom: 30px;
 }
 
-/* ===== HERO CAROUSEL ===== */
+
 
 .hero-section {
   width: 100%;
   padding: 0 !important;
-  margin-top: 0px; /* space for fixed navbar */
+  margin-top: 0px; 
   background-color: #fffcf8;
   overflow: hidden;
 }
@@ -112,7 +111,6 @@
   }
 }
 
-/* PRICING */
 .pricing-section {
   background-color: #fbf7f2;
 }
@@ -162,7 +160,6 @@
   border: 1px solid #c99c84 !important;
 }
 
-/* COLLECTIONS */
 .collections-section {
   background-color: #fffdf9;
 }
@@ -206,7 +203,7 @@
   padding: 5px 15px;
 }
 
-/* CRAFTSMANSHIP */
+
 .skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -252,7 +249,7 @@
   width: 90%;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .home-page section {
     padding: 35px 25px;
@@ -283,7 +280,6 @@
 
   
 }
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap");
 
 .bottom-page {
   background-color: #fbf7f2;
@@ -315,7 +311,6 @@
   margin-bottom: 35px;
 }
 
-/* TESTIMONIALS */
 
 .testimonials-section {
   text-align: center;

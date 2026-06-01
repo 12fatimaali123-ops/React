@@ -1,4 +1,3 @@
-// CrochetPersonalInfo.jsx
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -131,7 +130,7 @@ const PersonalInfo = () => {
     </div>
 
     <div className="profile-content">
-      {/* Basic Information */}
+      
       <div className="profile-section">
         <h3 className="section-title">📋 Basic Information</h3>
 
@@ -184,7 +183,6 @@ const PersonalInfo = () => {
         </div>
       </div>
 
-      {/* Crochet Experience */}
       <div className="profile-section">
         <h3 className="section-title">🎓 Crochet Experience</h3>
 
@@ -252,7 +250,6 @@ const PersonalInfo = () => {
         </div>
       </div>
 
-      {/* Favorite Projects */}
       <div className="profile-section">
         <h3 className="section-title">❤️ Favorite Projects to Make</h3>
 
@@ -280,7 +277,6 @@ const PersonalInfo = () => {
         )}
       </div>
 
-      {/* Yarn Preferences */}
       <div className="profile-section">
         <h3 className="section-title">🧵 Yarn Preferences</h3>
 
@@ -332,7 +328,6 @@ const PersonalInfo = () => {
         </div>
       </div>
 
-      {/* Shopping Preferences */}
       <div className="profile-section">
         <h3 className="section-title">🛍️ Shopping Preferences</h3>
 
@@ -381,7 +376,7 @@ const PersonalInfo = () => {
         </div>
       </div>
 
-      {/* Crochet Goals */}
+     
       <div className="profile-section">
         <h3 className="section-title">⭐ Crochet Goals & Inspiration</h3>
 
