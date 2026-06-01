@@ -26,18 +26,8 @@ const Contact = () => {
 
 
       <section className="contact-section">
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "0" }}>
-          <div
-            style={{
-              width: "4px",
-              height: "60px",
-              background: "#c8a882",
-              borderRadius: "2px",
-              marginRight: "0",
-              marginTop: "6px",
-              flexShrink: 0,
-            }}
-          />
+        <div>
+         
           <h1 className="contact-heading script">
             Let's stitch something together
           </h1>
@@ -93,6 +83,7 @@ const Contact = () => {
             </button>
           </div>
         </div>
+        
       </section>
   
   );
