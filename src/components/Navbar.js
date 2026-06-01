@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchComponent from './searchcomponents';
+import SearchComponent from './Searchcomponents';
 import logo from '../assests/logo.png';
 import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
@@ -10,7 +10,7 @@ import { IoPerson } from 'react-icons/io5';
 
 
 
-const NavBar = ({ wishlist, searchProduct,
+const Navbar = ({ wishlist, searchProduct,
   productSearchFunction,
   clearSearch }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,11 +54,11 @@ const NavBar = ({ wishlist, searchProduct,
 
         <div className={getNavLinksClass()}>
           <Link to="/" onClick={toggleMenu}>Home</Link>
-          <Link to="/Shop" onClick={toggleMenu}>Shop</Link>
-          <Link to="/About" onClick={toggleMenu}>About</Link>
-          <Link to="/Faq" onClick={toggleMenu}>FAQ</Link>
-          <Link to="/Contact" onClick={toggleMenu}>Contact</Link>
-          <Link to="/Wishlist" className="wishlist-nav-icon" onClick={toggleMenu}>
+          <Link to="/shop" onClick={toggleMenu}>Shop</Link>
+          <Link to="/about" onClick={toggleMenu}>About</Link>
+          <Link to="/faq" onClick={toggleMenu}>FAQ</Link>
+          <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+          <Link to="/wishlist" className="wishlist-nav-icon" onClick={toggleMenu}>
             <span className={getWishlistHeartClass()}>{getWishlistIcon()} </span>
             {wishlist.length > 0 && (
               <span className="wishlist-badge">{wishlist.length}</span>
@@ -79,4 +79,4 @@ const NavBar = ({ wishlist, searchProduct,
     </nav>
   );
 }
-export default NavBar;
+export default Navbar;

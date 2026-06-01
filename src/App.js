@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import Cart from "./pages/Cart";
@@ -67,7 +67,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/wishlist" element={<WishlistPage wishlist={wishlist} />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/personalinfo" element={<Personalinfo />} />
       </Routes>
       </main>
